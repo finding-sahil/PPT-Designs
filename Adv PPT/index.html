@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Standings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header-section">
+            <div class="title-box">
+                <h1>FFWS STANDINGS</h1>
+                <div class="subtitle">GRAND FINALS - DAY 2 - MATCH 12</div>
+            </div>
+            <div class="logo-area">
+                <!-- Placeholder for a logo if needed -->
+                <div class="logo-placeholder">FREE FIRE MAX</div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="table-container">
+                <div class="controls">
+                    <input type="file" id="csvInput" accept=".csv" />
+                    <label for="csvInput" class="btn upload-btn">Upload CSV</label>
+                    <button id="revealAllBtn" class="btn reveal-btn">Reveal All</button>
+                </div>
+                <table id="points-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>TEAM NAME</th>
+                            <th>BOOYAH</th>
+                            <th>PLACE PTS</th>
+                            <th>KILL PTS</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Rows will be populated here -->
+                    </tbody>
+                </table>
+                <p id="instruction">Press **ENTER** to reveal the next team!</p>
+            </div>
+            
+            <div class="sidebar">
+                <div class="sidebar-text">CHAMPION - FFWS 2025 | TOP 12 - QUALIFY</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

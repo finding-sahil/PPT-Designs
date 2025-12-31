@@ -1,0 +1,42 @@
+[
+  {
+    "rank": 1,
+    "teamName": "S8ULELITE",
+    "pp": 51,
+    "kp": 69,
+    "booyah": 1,
+    "points": 120
+  },
+  {
+    "rank": 2,
+    "teamName": "NG PRO'S",
+    "pp": 46,
+    "kp": 64,
+    "booyah": 0,
+    "points": 110
+  },
+  {
+    "rank": 3,
+    "teamName": "METANINZA",
+    "pp": 40,
+    "kp": 63,
+    "booyah": 1,
+    "points": 103
+  },
+  {
+    "rank": 4,
+    "teamName": "GODLIKE ESPORTS",
+    "pp": 33,
+    "kp": 67,
+    "booyah": 1,
+    "points": 100
+  },
+  {
+    "rank": 5,
+    "teamName": "HEAD HUNTERS",
+    "pp": 42,
+    "kp": 56,
+    "booyah": 2,
+    "points": 98
+  }
+]

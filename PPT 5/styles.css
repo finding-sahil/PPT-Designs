@@ -1,0 +1,157 @@
+/* Custom properties for easy color changes */
+:root {
+    --bg-dark: #121212;
+    --text-light: #ffffff;
+    --highlight-yellow: #ffc400; /* Used in all your images */
+    --border-dark: #333;
+}
+
+/* Base styles and dark theme (for screen viewing) */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling */
+.tournament-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.tournament-header h1 {
+    font-size: 3em;
+    font-weight: 800;
+    color: var(--highlight-yellow);
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.tournament-header h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 5px;
+    color: var(--text-light);
+}
+
+/* Table Container for Responsiveness */
+.table-container {
+    width: 100%;
+    max-width: 1000px; 
+    overflow-x: auto; 
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 600px; 
+}
+
+/* Table Header (thead) Styling */
+thead th {
+    background-color: var(--highlight-yellow);
+    color: var(--bg-dark);
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+thead th:nth-child(2) {
+    text-align: left; 
+}
+
+/* Table Body (tbody) Styling */
+tbody tr {
+    border-bottom: 1px solid var(--border-dark);
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #1a1a1a;
+}
+
+tbody td {
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.team-name {
+    text-align: left; 
+    font-weight: 600;
+}
+
+/* Highlight the winning row (Rank 1) */
+tbody tr:first-child td {
+    background-color: #2a2a00; 
+    font-weight: 700;
+    border-top: 2px solid var(--highlight-yellow);
+    border-bottom: 2px solid var(--highlight-yellow);
+}
+
+/* Highlighted text (like total points) */
+.highlight {
+    color: var(--highlight-yellow);
+}
+
+.total-pts {
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+/* Rank column specific styling */
+td:first-child {
+    font-weight: 800;
+    color: var(--highlight-yellow);
+}
+
+/* Button Styling (for screen only) */
+.print-button {
+    background-color: var(--highlight-yellow);
+    color: var(--bg-dark);
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    transition: background-color 0.2s;
+}
+
+.print-button:hover {
+    background-color: #ffd740;
+}
+
+/* ------------------------------------- */
+/* PDF/PRINT OPTIMIZATION STYLES */
+/* ------------------------------------- */
+@media print {
+    /* ... styles that override the colorful screen styles ... */
+    body {
+        background-color: #ffffff !important; /* Forces white background */
+        color: #000000 !important; /* Forces black text */
+    }
+    thead th {
+        background-color: #f0f0f0 !important; /* Changes yellow header to light grey */
+        color: #000000 !important;
+    }
+    .highlight, .total-pts {
+        color: #000000 !important; /* Changes yellow highlight to black */
+    }
+    /* ... and hides the button */
+    .print-button {
+        display: none;
+    }
+}

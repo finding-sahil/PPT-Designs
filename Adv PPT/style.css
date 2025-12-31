@@ -1,0 +1,218 @@
+body {
+    background: #f0f2f5; /* Light grey background */
+    color: #000;
+    font-family: 'Teko', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    text-transform: uppercase;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle texture */
+}
+
+/* --- Header Section --- */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ffcc00; /* FF Gold accent line */
+    padding-bottom: 10px;
+}
+
+.title-box h1 {
+    font-size: 4em;
+    margin: 0;
+    line-height: 0.9;
+    color: #ffcc00; /* FF Gold color */
+    text-shadow: 2px 2px 0px #000;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    background: #0b162a;
+    color: #ffcc00; /* Gold text */
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    transform: skewX(-10deg); /* Sporty skew */
+}
+
+.logo-placeholder {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffcc00; /* Gold */
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* --- Content Area --- */
+.content-area {
+    display: flex;
+    gap: 20px;
+}
+
+.table-container {
+    flex: 1;
+}
+
+/* --- Controls --- */
+.controls {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+#csvInput { display: none; }
+
+.btn {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2em;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s;
+    transform: skewX(-10deg);
+}
+
+.upload-btn {
+    background: #0b162a;
+    color: #fff;
+}
+
+.reveal-btn {
+    background: #ffcc00;
+    color: #000;
+}
+
+.btn:hover {
+    transform: skewX(-10deg) translateY(-2px);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+}
+
+/* --- Table Styles --- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 4px; /* Gap between rows */
+}
+
+thead th {
+    background: #0b162a; /* Dark Navy */
+    color: #ffcc00; /* Gold Headers */
+    padding: 15px 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+thead th:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+tbody tr {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-out;
+}
+
+tbody tr:nth-child(even) {
+    background: #e8e8e8; /* Light grey for alternating rows */
+}
+
+tbody td {
+    padding: 10px;
+    font-size: 1.8em; /* Large text */
+    text-align: center;
+    font-weight: 600;
+    color: #0b162a;
+    vertical-align: middle;
+}
+
+/* Rank Column Styling */
+tbody td:first-child {
+    background: #0b162a;
+    color: #fff;
+    width: 60px;
+    font-size: 1.5em;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Team Name Styling */
+tbody td:nth-child(2) {
+    text-align: left;
+    padding-left: 20px;
+    color: #0b162a;
+    font-size: 1.6em;
+}
+
+/* Points Column Styling */
+tbody td:last-child {
+    font-weight: 700;
+    color: #0b162a;
+    background: rgba(255, 204, 0, 0.2); /* Slight gold tint */
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* --- Animation --- */
+.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 60px;
+    background: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.sidebar-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #666;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+/* --- Instruction --- */
+#instruction {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #0b162a;
+    font-weight: 600;
+    text-align: center;
+}
+
+#instruction.hidden {
+    opacity: 0;
+}

@@ -1,0 +1,143 @@
+/* Custom properties for the purple/yellow theme */
+:root {
+    --bg-dark: #1f1437; /* Deep Purple from the image */
+    --text-light: #ffffff;
+    --highlight-yellow: #ffc400; /* Bright Yellow */
+    --highlight-med-yellow: #ffeb99; /* Slightly lighter yellow for 2nd/3rd place text */
+    --border-dark: #3a2b5e; /* Slightly lighter purple for borders */
+    --row-bg-dark: #2c1f4e; /* Darker row background */
+}
+
+/* Base styles and dark theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling */
+.tournament-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.tournament-header h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    color: var(--highlight-yellow);
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.tournament-header h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.tournament-header .subtitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--highlight-yellow);
+    text-transform: uppercase;
+}
+
+/* Table Container for Responsiveness */
+.table-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow-x: auto;
+    background-color: var(--row-bg-dark); /* Apply dark purple background to the whole table block */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 1em;
+    min-width: 650px;
+}
+
+/* Table Header (thead) Styling */
+thead th {
+    background-color: var(--highlight-yellow);
+    color: var(--bg-dark);
+    font-weight: 700;
+    padding: 12px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+thead th:nth-child(2) {
+    text-align: left;
+}
+
+/* Table Body (tbody) Styling */
+tbody tr {
+    border-bottom: 1px solid var(--border-dark);
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #3f2d65; /* Darken on hover */
+}
+
+tbody td {
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.team-name {
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Highlight the winning row (Rank 1) */
+tbody tr:first-child td {
+    background-color: #38255b; /* Top row background */
+    font-weight: 700;
+}
+
+/* Rank 1 Highlight */
+.highlight {
+    color: var(--highlight-yellow);
+}
+
+/* Rank 2 and 3 Highlight */
+.highlight-med {
+    color: var(--highlight-med-yellow);
+}
+
+.total-pts {
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+/* Rank column specific styling */
+td:first-child {
+    font-weight: 800;
+    /* Color for Rank 1, 2, 3 */
+}
+
+tbody tr:nth-child(1) td:first-child {
+    color: var(--highlight-yellow);
+}
+
+tbody tr:nth-child(2) td:first-child,
+tbody tr:nth-child(3) td:first-child {
+    color: var(--highlight-med-yellow);
+}

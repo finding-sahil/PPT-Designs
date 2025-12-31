@@ -1,0 +1,150 @@
+/* Custom properties for the dark/teal theme */
+:root {
+    --bg-dark: #1e1e1e;
+    --text-light: #ffffff;
+    --highlight-teal: #00bcd4; /* Bright Teal/Cyan */
+    --header-teal: #00a0b5; /* Slightly darker teal for the header */
+    --border-grey: #333333;
+    --row-dark: #2a2a2a;
+    
+    /* Rank Movement Colors */
+    --rank-up: #4caf50;    /* Green for rank up (upward arrow) */
+    --rank-down: #f44336;  /* Red for rank down (downward arrow) */
+    --rank-stable: #777777;/* Grey for stable rank */
+}
+
+/* Base styles and dark theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling */
+.tournament-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tournament-header h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: var(--highlight-teal);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.tournament-header p {
+    font-size: 0.9em;
+    color: var(--rank-stable);
+    margin-top: 5px;
+}
+
+/* Table Container for Responsiveness */
+.table-container {
+    width: 100%;
+    max-width: 900px;
+    overflow-x: auto;
+    background-color: var(--row-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+/* Table Header (thead) Styling */
+thead th {
+    background-color: var(--header-teal);
+    color: var(--text-light);
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Table Body (tbody) Styling */
+tbody tr {
+    border-bottom: 1px solid var(--border-grey);
+    background-color: var(--row-dark);
+}
+
+tbody tr:hover {
+    background-color: #383838;
+}
+
+tbody td {
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: 400;
+    border-right: 1px solid var(--border-grey);
+}
+
+.team-name {
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Rank Column Specific Styling */
+.rank-col {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    border-right: 1px solid var(--border-grey);
+}
+
+.rank-number {
+    font-weight: 800;
+    font-size: 1.1em;
+    width: 30%;
+    text-align: left;
+    color: var(--text-light);
+}
+
+.rank-change {
+    font-size: 0.8em;
+    width: 50%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.change-up {
+    color: var(--rank-up);
+}
+
+.change-down {
+    color: var(--rank-down);
+}
+
+.change-stable {
+    color: var(--rank-stable);
+}
+
+/* Highlights */
+.highlight {
+    color: var(--highlight-teal);
+    font-weight: 700;
+}
+
+.total-pts {
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+/* Specific styling for the top rank row */
+.rank-highlight td {
+    background-color: #383838; /* Darker grey background for the highlighted rows */
+}
